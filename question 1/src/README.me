@@ -1,0 +1,45 @@
+# Source Code
+
+This directory contains the source code files for the banking application.
+
+You can start by creating the following classes:
+
+- `Account.java`
+- `Customer.java`
+- `Bank.java`
+
+Additionally, you can create a `Main` class to instantiate objects, simulate banking operations, and test the functionality of your application.
+
+An example `Main` class is provided to help you get started:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        // Create a new bank
+        Bank bank = new Bank();
+
+        // Create some customers
+        Customer customer1 = new Customer("John Doe", "123 Main St.");
+        Customer customer2 = new Customer("Jane Smith", "456 Oak Ave.");
+
+        // Add customers to the bank
+        bank.addCustomer(customer1);
+        bank.addCustomer(customer2);
+
+        // Open accounts for customers
+        Account account1 = new SavingsAccount(1234, "John Doe", 1000.0);
+        Account account2 = new CheckingAccount(5678, "Jane Smith", 5000.0);
+
+        // Associate accounts with customers
+        customer1.addAccount(account1);
+        customer2.addAccount(account2);
+
+        // Perform banking operations
+        account1.deposit(500.0);
+        account2.withdraw(1000.0);
+
+        // Print account balances
+        System.out.println("Account 1 Balance: " + account1.getBalance());
+        System.out.println("Account 2 Balance: " + account2.getBalance());
+    }
+}
