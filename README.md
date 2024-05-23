@@ -17,6 +17,3 @@ This repository contains practice questions and exercises for learning Object-Or
 
 If you have any suggestions for additional questions or improvements, feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
